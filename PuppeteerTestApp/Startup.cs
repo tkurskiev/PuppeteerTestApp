@@ -30,7 +30,7 @@ namespace PuppeteerTestApp
 
             Browser puppeteerBrowser = null;
 
-            Task.Run(async () => puppeteerBrowser = await LaunchPuppeteerBrowserAsync());
+            Task.Run(async () => puppeteerBrowser = await LaunchPuppeteerBrowserAsync()).Wait();
 
             services.AddSingleton(puppeteerBrowser);
         }
